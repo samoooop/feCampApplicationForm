@@ -282,7 +282,8 @@ var getConfirmation = function() {
         "ที่อยู่:",
         "หมายเลขโทรศัพท์:",
         "หมายเลขโทรศัพท์มือถือ:",
-        "อีเมล:"
+        "อีเมล:",
+        "ขนาดเสื้อ:"
     ];
     var info = [
         $("#first_name").val() + "   " + $("#last_name").val(),
@@ -294,7 +295,8 @@ var getConfirmation = function() {
         $("#houseNo").val() + " " + $("#moo").val() + " " + $("#soi").val() + " " + $("#street").val() + " " + $("#subDistrict").val() + " " + $("#district").val(),
         $("#telephone").val(),
         $("#phone").val(),
-        "eample@fecamp.chula.ac.th"
+        $("#email").val(),
+        $("#shirtSize").val()
     ];
     $("#personalInfoTable tr").remove();
     for (var i = 0; i < head.length; i++) {

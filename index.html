@@ -155,264 +155,273 @@
                         <div class="col-xs-1">
                         </div>
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="col-xs-5 form-group">
+                            <div class="input-group inputGroupContainer">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input name="email" placeholder="email" class="form-control" type="text" id="email" required>
+                            </div>
+                            <div class="col-xs-7">
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="well inputGroupContainer">
-                    <legend>ข้อมูลโรงเรียน</legend>
-                    <div class="form-group has-feedback">
+                    <div class="well inputGroupContainer">
+                        <legend>ข้อมูลโรงเรียน</legend>
+                        <div class="form-group has-feedback">
+                            <div class="row">
+                                <div class="col-xs-6 col-xd-offset-1">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+                                        <input name="schoolName" placeholder="ชื่อโรงเรียน" class="form-control typeahead " type="text " autocomplete="off " id="schoolNameInput" required>
+                                    </div>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                        <textarea rows=5 name="schoolAddress" placeholder="ที่อยู่ของโรงเรียน" class="form-control" type="text " id="schoolAddressInput" required></textarea>
+                                    </div>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                                <div class="col-xs-5">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+                                        <input name="schoolTelephone" placeholder="เบอร์โทรศัพท์" class="form-control" type="text" id="schooltel">
+                                    </div>
+                                </div>
+                                <div class="col-xs-1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="well inputGroupContainer" id="parentContact">
                         <div class="row">
-                            <div class="col-xs-6 col-xd-offset-1">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
-                                    <input name="schoolName" placeholder="ชื่อโรงเรียน" class="form-control typeahead " type="text " autocomplete="off " id="schoolNameInput" required>
+                            <legend>ข้อมูลติดต่อผู้ปกครอง</legend>
+                        </div>
+                        <!-- First Row -->
+                        <div class="row">
+                            <div class="col-xs-5 form-group has-feedback">
+                                <div class="input-group inputGroupContainer">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input name="first_name" placeholder="ชื่อจริง" class="form-control" type="text" required>
+                                </div>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            </div>
+                            <div class="col-xs-5 form-group col-xs-offset-2 has-feedback">
+                                <div class="input-group inputGroupContainer">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input name="last_name" placeholder="นามสกุล" class="form-control" type="text" required>
                                 </div>
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group has-feedback">
+                        <!-- First Row End -->
+
                         <div class="row">
-                            <div class="col-xs-6">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                    <textarea rows=5 name="schoolAddress" placeholder="ที่อยู่ของโรงเรียน" class="form-control" type="text " id="schoolAddressInput" required></textarea>
+                            <div class="col-xs-4 form-group has-feedback">
+                                <div class="input-group inputGroupContainer">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-link"></i></span>
+                                    <input name="relation" placeholder="ความสัมพันธ์" class="form-control" type="text" required>
                                 </div>
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
-                            <div class="col-xs-5">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="input-group">
+                            <div class="col-xs-4 form-group">
+                                <div class="input-group inputGroupContainer">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                                    <input name="schoolTelephone" placeholder="เบอร์โทรศัพท์" class="form-control" type="text" id="schooltel">
+                                    <input name="telephone" placeholder="โทรศัพท์บ้าน" class="form-control" type="text">
                                 </div>
+                            </div>
+                            <div class="col-xs-4 col-xd-offset-1 form-group has-feedback">
+                                <div class="input-group inputGroupContainer">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                                    <input name="phone" placeholder="โทรศัพท์มือถือ" class="form-control" type="text" required>
+                                </div>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
                             <div class="col-xs-1">
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="well inputGroupContainer" id="parentContact">
-                    <div class="row">
-                        <legend>ข้อมูลติดต่อผู้ปกครอง</legend>
-                    </div>
-                    <!-- First Row -->
-                    <div class="row">
-                        <div class="col-xs-5 form-group has-feedback">
-                            <div class="input-group inputGroupContainer">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="first_name" placeholder="ชื่อจริง" class="form-control" type="text" required>
+                        <div class="row">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" id="addressCheckbox">ผู้ปกครองมีที่อยู่เดียวกันกับนักเรียน</label>
                             </div>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
-                        <div class="col-xs-5 form-group col-xs-offset-2 has-feedback">
-                            <div class="input-group inputGroupContainer">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="last_name" placeholder="นามสกุล" class="form-control" type="text" required>
-                            </div>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                        </div>
-                    </div>
-                    <!-- First Row End -->
 
-                    <div class="row">
-                        <div class="col-xs-4 form-group has-feedback">
-                            <div class="input-group inputGroupContainer">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-link"></i></span>
-                                <input name="relation" placeholder="ความสัมพันธ์" class="form-control" type="text" required>
+                        <div class="row">
+                            <div class="col-xs-3 form-group has-feedback">
+                                <div class="input-group inputGroupContainer">
+                                    <input name="houseNo" placeholder="บ้านเลขที่" class="form-control" type="text" id="pHouseNo" required>
+                                </div>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                        </div>
-                        <div class="col-xs-4 form-group">
-                            <div class="input-group inputGroupContainer">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                                <input name="telephone" placeholder="โทรศัพท์บ้าน" class="form-control" type="text">
-                            </div>
-                        </div>
-                        <div class="col-xs-4 col-xd-offset-1 form-group has-feedback">
-                            <div class="input-group inputGroupContainer">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                                <input name="phone" placeholder="โทรศัพท์มือถือ" class="form-control" type="text" required>
-                            </div>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                        </div>
-                        <div class="col-xs-1">
-                        </div>
-                    </div>
+                            <div class="col-xs-3 form-group">
+                                <div class="input-group inputGroupContainer">
+                                    <input name="zone" placeholder="หมู่" class="form-control" type="text" id="pMoo">
+                                </div>
 
-                    <div class="row">
-                        <div class="checkbox">
-                            <label><input type="checkbox" value="" id="addressCheckbox">ผู้ปกครองมีที่อยู่เดียวกันกับนักเรียน</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-3 form-group has-feedback">
-                            <div class="input-group inputGroupContainer">
-                                <input name="houseNo" placeholder="บ้านเลขที่" class="form-control" type="text" id="pHouseNo" required>
                             </div>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            <div class="col-xs-3 form-group">
+                                <div class="input-group inputGroupContainer">
+                                    <input name="soi" placeholder="ตรอก/ซอย" class="form-control" type="text" id="pSoi">
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                            </div>
                         </div>
-                        <div class="col-xs-3 form-group">
-                            <div class="input-group inputGroupContainer">
-                                <input name="zone" placeholder="หมู่" class="form-control" type="text" id="pMoo">
+
+                        <div class="row">
+                            <div class="col-xs-4 form-group">
+                                <div class="input-group inputGroupContainer">
+                                    <input name="road" placeholder="ถนน" class="form-control" type="text" id="pStreet">
+                                </div>
+                            </div>
+                            <div class="col-xs-4 form-group has-feedback">
+                                <div class="input-group inputGroupContainer">
+                                    <input name="subdistrict" placeholder="แขวง/ตำบล" class="form-control" type="text" id="pSubDistrict" required>
+                                </div>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            </div>
+                            <div class="col-xs-4 form-group has-feedback">
+                                <div class="input-group inputGroupContainer">
+                                    <input name="district" placeholder="เขต/อำเภอ" class="form-control" type="text" id="pDistrict" required>
+                                </div>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
 
-                        </div>
-                        <div class="col-xs-3 form-group">
-                            <div class="input-group inputGroupContainer">
-                                <input name="soi" placeholder="ตรอก/ซอย" class="form-control" type="text" id="pSoi">
-                            </div>
-                        </div>
-                        <div class="col-xs-3">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-4 form-group">
-                            <div class="input-group inputGroupContainer">
-                                <input name="road" placeholder="ถนน" class="form-control" type="text" id="pStreet">
-                            </div>
-                        </div>
-                        <div class="col-xs-4 form-group has-feedback">
-                            <div class="input-group inputGroupContainer">
-                                <input name="subdistrict" placeholder="แขวง/ตำบล" class="form-control" type="text" id="pSubDistrict" required>
-                            </div>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                        </div>
-                        <div class="col-xs-4 form-group has-feedback">
-                            <div class="input-group inputGroupContainer">
-                                <input name="district" placeholder="เขต/อำเภอ" class="form-control" type="text" id="pDistrict" required>
-                            </div>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
 
                     </div>
-
-                </div>
-                <div class="well inputGroupContainer">
-                    <legend>ไซซ์เสื้อ</legend>
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <select class="form-control" id="sel2">
+                    <div class="well inputGroupContainer">
+                        <legend>ขนาดเสื้อ</legend>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <select class="form-control" id="shirtSize">
                               <option>XS</option>
                               <option>S</option>
                               <option>M</option>
                               <option>L</option>
                               <option>XL</option>
                             </select>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="well inputGroupContainer">
-                    <legend>ความต้องการพิเศษ</legend>
-                    <div class="row">
-                        <div class="col-xs-6 form-group">
-                            <div class="input-group inputGroupContainer">
-                                <input name="disease" placeholder="โรคประจำตัว" class="form-control" type="text" id="disease">
+                    <div class="well inputGroupContainer">
+                        <legend>ความต้องการพิเศษ</legend>
+                        <div class="row">
+                            <div class="col-xs-6 form-group">
+                                <div class="input-group inputGroupContainer">
+                                    <input name="disease" placeholder="โรคประจำตัว" class="form-control" type="text" id="disease">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 form-group">
+                                <div class="input-group inputGroupContainer">
+                                    <input name="donteat" placeholder="อาหาร/ยาที่แพ้" class="form-control" type="text" id="donteat">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-xs-6 form-group">
-                            <div class="input-group inputGroupContainer">
-                                <input name="donteat" placeholder="อาหาร/ยาที่แพ้" class="form-control" type="text" id="donteat">
+                        <div class="row">
+                            <textarea class="form-control" rows="5" name="comment1" placeholder="ความต้องการพิเศษอื่น ๆ: ต้องการให้พี่ ๆ ดูแลเรื่องใดเป็นพิเศษ"></textarea>
+                        </div>
+                    </div>
+                    <div class="well" id="questions">
+                        <legend>ข้อมูลการสมัคร</legend>
+                        <div class="row">
+                            <div class="form-group has-feedback">
+                                <label class="col-md-2 control-label">คำถามข้อที่ 1</label>
+                                <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                        <textarea class="form-control" name="answer1" placeholder="" required id="answer1"></textarea>
+                                    </div>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="col-md-2 control-label">คำถามข้อที่ 2</label>
+                                <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                        <textarea class="form-control" name="answer2" placeholder="" required id="answer2"></textarea>
+                                    </div>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="col-md-2 control-label">คำถามข้อที่ 3</label>
+                                <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                        <textarea class="form-control" name="answer3" placeholder="" required id="answer3"></textarea>
+                                    </div>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="col-md-2 control-label">คำถามข้อที่ 4</label>
+                                <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                        <textarea class="form-control" name="answer4" placeholder="" required id="answer4"></textarea>
+                                    </div>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="col-md-2 control-label">คำถามข้อที่ 5</label>
+                                <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                        <textarea class="form-control" name="answer5" placeholder="" required id="answer5"></textarea>
+                                    </div>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="col-md-2 control-label">คำถามข้อที่ 6</label>
+                                <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                        <textarea class="form-control" name="answer6" placeholder="" id="answer6"></textarea>
+                                    </div>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <textarea class="form-control" rows="5" name="comment1" placeholder="ความต้องการพิเศษอื่น ๆ: ต้องการให้พี่ ๆ ดูแลเรื่องใดเป็นพิเศษ"></textarea>
-                    </div>
-                </div>
-                <div class="well" id="questions">
-                    <legend>ข้อมูลการสมัคร</legend>
-                    <div class="row">
-                        <div class="form-group has-feedback">
-                            <label class="col-md-2 control-label">คำถามข้อที่ 1</label>
-                            <div class="col-md-10 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="answer1" placeholder="" required id="answer1"></textarea>
-                                </div>
-                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="form-group has-feedback">
-                            <label class="col-md-2 control-label">คำถามข้อที่ 2</label>
-                            <div class="col-md-10 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="answer2" placeholder="" required id="answer2"></textarea>
-                                </div>
-                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="form-group has-feedback">
-                            <label class="col-md-2 control-label">คำถามข้อที่ 3</label>
-                            <div class="col-md-10 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="answer3" placeholder="" required id="answer3"></textarea>
-                                </div>
-                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="form-group has-feedback">
-                            <label class="col-md-2 control-label">คำถามข้อที่ 4</label>
-                            <div class="col-md-10 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="answer4" placeholder="" required id="answer4"></textarea>
-                                </div>
-                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="form-group has-feedback">
-                            <label class="col-md-2 control-label">คำถามข้อที่ 5</label>
-                            <div class="col-md-10 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="answer5" placeholder="" required id="answer5"></textarea>
-                                </div>
-                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                        <div class="form-group has-feedback">
-                            <label class="col-md-2 control-label">คำถามข้อที่ 6</label>
-                            <div class="col-md-10 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="answer6" placeholder="" id="answer6"></textarea>
-                                </div>
-                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Success message -->
-                <!--<div class="alert alert-success " role="alert " id="success_message ">Success <i class="glyphicon glyphicon-thumbs-up "></i> Thanks for contacting us, we will get back to you shortly.</div>-->
+                    <!-- Success message -->
+                    <!--<div class="alert alert-success " role="alert " id="success_message ">Success <i class="glyphicon glyphicon-thumbs-up "></i> Thanks for contacting us, we will get back to you shortly.</div>-->
 
-                <!-- Button -->
-                <div class="form-group ">
-                    <label class="col-md-4 control-label "></label>
-                    <div class="col-md-4 ">
-                        <button type="submit" class="btn btn-warning" id="submitButton">Submit<span class="glyphicon glyphicon-send" ></span></button>
+                    <!-- Button -->
+                    <div class="form-group ">
+                        <label class="col-md-4 control-label "></label>
+                        <div class="col-md-4 ">
+                            <button type="submit" class="btn btn-warning" id="submitButton">Submit<span class="glyphicon glyphicon-send" ></span></button>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Button -->
-                <!--<div class="col-md-4 ">
+                    <!-- Button -->
+                    <!--<div class="col-md-4 ">
                     <button class="btn" type="button" id="hideButton">Hide<span class="glyphicon glyphicon-send " ></span></button>
                 </div>-->
 
             </fieldset>
         </form>
-    </div>
+        </div>
     </div>
     <!-- /.container -->
 
