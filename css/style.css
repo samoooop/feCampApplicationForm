@@ -1,0 +1,15 @@
+#success_message {
+    display: none;
+}
+
+div {
+    padding: 0px 0px 3px 3px;
+}
+
+.registerForm {
+    max-width: 900px;
+}
+
+div.container {
+    max-width: 750px;
+}
