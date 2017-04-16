@@ -51,13 +51,13 @@
                         <div class="col-xs-5 form-group has-feedback">
                             <div class="input-group inputGroupContainer">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="first_name" placeholder="ชื่อจริง" class="form-control" type="text" required>
+                                <input name="first_name" placeholder="ชื่อจริง" class="form-control" type="text" required id="first_name">
                             </div>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <div class="col-xs-5 form-group has-feedback">
                             <div class="input-group inputGroupContainer">
-                                <input name="last_name" placeholder="นามสกุล" class="form-control" type="text" required>
+                                <input name="last_name" placeholder="นามสกุล" class="form-control" type="text" required id="last_name">
                             </div>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
@@ -68,7 +68,7 @@
                         <div class="col-xs-4  form-group  has-feedback">
                             <div class="input-group inputGroupContainer">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-apple"></i></span>
-                                <input name="nickname" placeholder="ชื่อเล่น" class="form-control" type="text" required>
+                                <input name="nickname" placeholder="ชื่อเล่น" class="form-control" type="text" required id="nickname">
                             </div>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
@@ -142,13 +142,13 @@
                         <div class="col-xs-5 form-group">
                             <div class="input-group inputGroupContainer">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                                <input name="telephone" placeholder="หมายเลขโทรศัพท์บ้าน" class="form-control" type="text">
+                                <input name="telephone" placeholder="หมายเลขโทรศัพท์บ้าน" class="form-control" type="text" id="telephone">
                             </div>
                         </div>
                         <div class="col-xs-5 col-xd-offset-1 form-group has-feedback">
                             <div class="input-group inputGroupContainer">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                                <input name="phone" placeholder="หมายเลขโทรศัพท์มือถือ" class="form-control" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+                                <input name="phone" placeholder="หมายเลขโทรศัพท์มือถือ" class="form-control" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="phone" required>
                             </div>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
@@ -188,7 +188,7 @@
                             <div class="col-xs-5">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                                    <input name="schoolTelephone" placeholder="เบอร์โทรศัพท์" class="form-control" type="text">
+                                    <input name="schoolTelephone" placeholder="เบอร์โทรศัพท์" class="form-control" type="text" id="schooltel">
                                 </div>
                             </div>
                             <div class="col-xs-1">
@@ -315,12 +315,12 @@
                     <div class="row">
                         <div class="col-xs-6 form-group">
                             <div class="input-group inputGroupContainer">
-                                <input name="disease" placeholder="โรคประจำตัว" class="form-control" type="text">
+                                <input name="disease" placeholder="โรคประจำตัว" class="form-control" type="text" id="disease">
                             </div>
                         </div>
                         <div class="col-xs-6 form-group">
                             <div class="input-group inputGroupContainer">
-                                <input name="donteat" placeholder="อาหาร/ยาที่แพ้" class="form-control" type="text">
+                                <input name="donteat" placeholder="อาหาร/ยาที่แพ้" class="form-control" type="text" id="donteat">
                             </div>
                         </div>
                     </div>
@@ -336,7 +336,7 @@
                             <div class="col-md-10 inputGroupContainer">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="answer1" placeholder="" required></textarea>
+                                    <textarea class="form-control" name="answer1" placeholder="" required id="answer1"></textarea>
                                 </div>
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
@@ -346,7 +346,7 @@
                             <div class="col-md-10 inputGroupContainer">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="answer2" placeholder="" required></textarea>
+                                    <textarea class="form-control" name="answer2" placeholder="" required id="answer2"></textarea>
                                 </div>
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
@@ -356,7 +356,7 @@
                             <div class="col-md-10 inputGroupContainer">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="answer3" placeholder="" required></textarea>
+                                    <textarea class="form-control" name="answer3" placeholder="" required id="answer3"></textarea>
                                 </div>
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
@@ -366,7 +366,7 @@
                             <div class="col-md-10 inputGroupContainer">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="answer4" placeholder="" required></textarea>
+                                    <textarea class="form-control" name="answer4" placeholder="" required id="answer4"></textarea>
                                 </div>
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
@@ -376,7 +376,7 @@
                             <div class="col-md-10 inputGroupContainer">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="answer5" placeholder="" required></textarea>
+                                    <textarea class="form-control" name="answer5" placeholder="" required id="answer5"></textarea>
                                 </div>
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
@@ -386,7 +386,7 @@
                             <div class="col-md-10 inputGroupContainer">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                    <textarea class="form-control" name="answer6" placeholder="" required></textarea>
+                                    <textarea class="form-control" name="answer6" placeholder="" required id="answer6"></textarea>
                                 </div>
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
@@ -406,9 +406,9 @@
                 </div>
 
                 <!-- Button -->
-                <div class="col-md-4 ">
+                <!--<div class="col-md-4 ">
                     <button class="btn" type="button" id="hideButton">Hide<span class="glyphicon glyphicon-send " ></span></button>
-                </div>
+                </div>-->
 
             </fieldset>
         </form>
@@ -418,46 +418,80 @@
 
     <div class="container" id="confirmation">
         <div class="well">
-            <div class=" col-md-4 ">
-                <button class="btn " type="button" id="backButton">Back<span class="glyphicon glyphicon-send " ></span></button>
+            <div class="row">
+                <h1>ข้อมูลส่วนตัว</h1>
             </div>
-        </div>
-    </div>
-
-    <script src="js/schoolNames.js "></script>
-    <script src="js/schoolAddress.js "></script>
-    <script src="js/bootstrap3-typeahead.js "></script>
-    <script src="js/index.js "></script>
-    <script type="text/javascript ">
-        $('.typeahead').typeahead({
-            source: schoolNames
-        }).blur(function() {
-            if (schoolNames.indexOf($(this).val()) == -1) {
-                $(this).val('');
-            }
-        });
-    </script>
-
-    <!-- Modal -->
-    <div class="modal fade " id="myModal" role="dialog">
-        <div class="modal-dialog ">
-
-            <!-- Modal content-->
-            <div class="modal-content ">
-                <div class="modal-header ">
-                    <button type="button " class="close " data-dismiss="modal ">&times;</button>
-                    <h4 class="modal-title ">คำเตือน!</h4>
+            <div class="row">
+                <div class="col-xs-7">
+                    <div class="row">
+                        <table class="table table-striped" id="personalInfoTable">
+                        </table>
+                    </div>
+                    <div class="row">
+                        <legend>ข้อมุลโรงเรียน</legend>
+                        <table class="table table-striped" id="schoolInfoTable">
+                        </table>
+                    </div>
+                    <div class="row">
+                        <legend>ผู้ปกครองหรือผู้ที่ติดต่อได้ยามฉุกเฉิน</legend>
+                        <table class="table table-striped" id="parentInfoTable">
+                        </table>
+                    </div>
                 </div>
-                <div class="modal-body ">
-                    <p>หลังจากยืนยันการสมัครแล้วจะไม่สามารถแก้ไขข้อมูลได้อีก</p>
-                </div>
-                <div class="modal-footer ">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">รับทราบ</button>
+                <div class=" col-md-5">
+                    <img src="img/pp5.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236">
                 </div>
             </div>
+            <div class="row">
+                <h1>คำตอบในใบสมัคร</h1>
+                <table class="table table-striped" id="answerTable">
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-xs-7">
+                </div>
+                <div class="col-xs-5 pull-right">
+                    <button class="btn " type="button" id="backButton">กลับไปแก่ไข<span class="glyphicon glyphicon-pencil"></span></button>
 
+                    <button class="btn " type="button" id="confirmButton">ยืนยัน<span class="glyphicon glyphicon-ok" ></span></button>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <script src="js/schoolNames.js "></script>
+        <script src="js/schoolAddress.js "></script>
+        <script src="js/bootstrap3-typeahead.js "></script>
+        <script src="js/index.js "></script>
+        <script type="text/javascript ">
+            $('.typeahead').typeahead({
+                source: schoolNames
+            }).blur(function() {
+                if (schoolNames.indexOf($(this).val()) == -1) {
+                    $(this).val('');
+                }
+            });
+        </script>
+
+        <!-- Modal -->
+        <div class="modal fade " id="myModal" role="dialog">
+            <div class="modal-dialog ">
+
+                <!-- Modal content-->
+                <div class="modal-content ">
+                    <div class="modal-header ">
+                        <button type="button " class="close " data-dismiss="modal ">&times;</button>
+                        <h4 class="modal-title ">คำเตือน!</h4>
+                    </div>
+                    <div class="modal-body ">
+                        <p>หลังจากยืนยันการสมัครแล้วจะไม่สามารถแก้ไขข้อมูลได้อีก</p>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">รับทราบ</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
 </body>
 

@@ -189,12 +189,14 @@
 //       })
 
 //   });
-$('#hideButton').on('click', function(e) {
+$('#hideButton').on('submitBotton', function(e) {
     console.log('Hello')
     divId = "registerForm"
     $("#" + divId).toggle();
     $('#myModal').modal('show');
-
+    confirmationDivId = "confirmation"
+    $("#" + confirmationDivId).toggle();
+    getConfirmation();
     var i = 0;
     i += $("#question").has(".has_error")
     console.log(i)
@@ -210,7 +212,8 @@ $('#backButton').on('click', function(e) {
     console.log('Hello')
     divId = "registerForm"
     $("#" + divId).toggle();
-    $('#myModal').modal('show');
+    confirmationDivId = "confirmation"
+    $("#" + confirmationDivId).toggle();
 })
 
 $(function() {
@@ -251,13 +254,127 @@ $('#contact_form').validator().on('submit', function(e) {
     } else {
         console.log("Hey Goodjob")
         event.preventDefault()
+        console.log('Hello')
         divId = "registerForm"
         $("#" + divId).toggle();
+        $('#myModal').modal('show');
         confirmationDivId = "confirmation"
         $("#" + confirmationDivId).toggle();
-        $('#myModal').modal('show');
+        getConfirmation();
+        var i = 0;
+        i += $("#question").has(".has_error")
+        console.log(i)
     }
 })
 
 confirmationDivId = "confirmation"
 $("#" + confirmationDivId).toggle();
+
+var getConfirmation = function() {
+    var table = document.getElementById("personalInfoTable");
+    var head = [
+        "ชื่อ - นามสกุล:",
+        "ชื่อเล่น",
+        "วันเดือนปีเกิด:",
+        "ศาสนา:",
+        "โรคประจำตัว:",
+        "อาหารที่แพ้:",
+        "ที่อยู่:",
+        "หมายเลขโทรศัพท์:",
+        "หมายเลขโทรศัพท์มือถือ:",
+        "อีเมล:"
+    ];
+    var info = [
+        $("#first_name").val() + "   " + $("#last_name").val(),
+        $("#nickname").val(),
+        $("#birthdatepicker").val(),
+        $("#sel1").val(),
+        $("#disease").val(),
+        $("#donteat").val(),
+        $("#houseNo").val() + " " + $("#moo").val() + " " + $("#soi").val() + " " + $("#street").val() + " " + $("#subDistrict").val() + " " + $("#district").val(),
+        $("#telephone").val(),
+        $("#phone").val(),
+        "eample@fecamp.chula.ac.th"
+    ];
+    $("#personalInfoTable tr").remove();
+    for (var i = 0; i < head.length; i++) {
+        var row = table.insertRow(i)
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = head[i];
+        cell2.innerHTML = info[i];
+    }
+
+    var table = document.getElementById("schoolInfoTable");
+    var head = [
+        "ข้อมูลโรงเรียน",
+        "ชื่อโรงเรียน:",
+        "ที่อยู่โรงเรียน: ",
+        "หมายเลขโทรศัพท์โรงเรียน"
+    ];
+    var info = [
+        " ",
+        $("#schoolNameInput").val(),
+        $("#schoolAddressInput").val(),
+        $("#schooltel").val()
+    ];
+    $("#schoolInfoTable tr").remove();
+    for (var i = 0; i < head.length; i++) {
+        var row = table.insertRow(i)
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = head[i];
+        cell2.innerHTML = info[i];
+    }
+
+    var table = document.getElementById("parentInfoTable");
+    var head = [
+        "ชื่อ - นามสกุล:",
+        "ความสัมพันธ์:",
+        "หมายเลขโทรศัพท์:"
+    ];
+    var info = [
+        " ",
+        $("#schoolNameInput").val(),
+        $("#schoolAddressInput").val(),
+        $("#schooltel").val()
+    ];
+    $("#parentInfoTable tr").remove();
+    for (var i = 0; i < head.length; i++) {
+        var row = table.insertRow(i)
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = head[i];
+        cell2.innerHTML = info[i];
+    }
+
+    var table = document.getElementById("answerTable");
+    var head = [
+        "<b><font size=\"4\">คำถามข้อที่ 1</font></b>",
+        $("#answer1").val(),
+        "<b><font size=\"4\">คำถามข้อที่ 2</font></b>",
+        $("#answer2").val(),
+        "<b><font size=\"4\">คำถามข้อที่ 3</font></b>",
+        $("#answer3").val(),
+        "<b><font size=\"4\">คำถามข้อที่ 4</font></b>",
+        $("#answer4").val(),
+        "<b><font size=\"4\">คำถามข้อที่ 5</font></b>",
+        $("#answer5").val(),
+        "<b><font size=\"4\">คำถามข้อที่ 6</font></b>",
+        $("#answer6").val()
+    ];
+    // var info = [
+    //     " ",
+    //     $("#schoolNameInput").val(),
+    //     $("#schoolAddressInput").val(),
+    //     $("#schooltel").val()
+    // ];
+    $("#parentInfoTable tr").remove();
+    for (var i = 0; i < head.length; i++) {
+        var row = table.insertRow(i)
+        var cell1 = row.insertCell(0);
+        // var cell2 = row.insertCell(1);
+        cell1.innerHTML = head[i];
+        // cell2.innerHTML = info[i];
+    }
+}
