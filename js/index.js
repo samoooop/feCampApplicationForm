@@ -220,10 +220,10 @@ $(function() {
     $("#birthdatepicker").datepicker();
 });
 
-$('#prefacture').on('blur',function(){
-  inputPrefactureName = $('#prefacture').val()
-  index = prefactureNames.indexOf(inputPrefactureName)
-  console.log(index)
+$('#prefacture').on('blur', function() {
+    inputPrefactureName = $('#prefacture').val()
+    index = prefactureNames.indexOf(inputPrefactureName)
+    console.log(index)
 });
 
 $('#schoolNameInput').on('blur', function() {
@@ -261,7 +261,7 @@ $("#addressCheckbox").change(function() {
 $('#contact_form').validator().on('submit', function(e) {
     if (e.isDefaultPrevented()) {
         console.log("Hey it's wrong")
-        // $('#warningIncompleteSubmitModal').modal('show');
+            // $('#warningIncompleteSubmitModal').modal('show');
     } else {
         console.log("Hey Goodjob")
         event.preventDefault()
@@ -347,10 +347,9 @@ var getConfirmation = function() {
         "หมายเลขโทรศัพท์:"
     ];
     var info = [
-        " ",
-        $("#schoolNameInput").val(),
-        $("#schoolAddressInput").val(),
-        $("#schooltel").val()
+        $("#pFirstName").val() + "   " + $("#pLastName").val(),
+        $("#pRelation").val(),
+        $("#pPhone").val()
     ];
     $("#parentInfoTable tr").remove();
     for (var i = 0; i < head.length; i++) {
@@ -382,7 +381,7 @@ var getConfirmation = function() {
     //     $("#schoolAddressInput").val(),
     //     $("#schooltel").val()
     // ];
-    $("#parentInfoTable tr").remove();
+    $("#answerTable tr").remove();
     for (var i = 0; i < head.length; i++) {
         var row = table.insertRow(i)
         var cell1 = row.insertCell(0);
