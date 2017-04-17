@@ -219,6 +219,13 @@ $('#backButton').on('click', function(e) {
 $(function() {
     $("#birthdatepicker").datepicker();
 });
+
+$('#prefacture').on('blur',function(){
+  inputPrefactureName = $('#prefacture').val()
+  index = prefactureNames.indexOf(inputPrefactureName)
+  console.log(index)
+});
+
 $('#schoolNameInput').on('blur', function() {
     inputSchoolName = $('#schoolNameInput').val()
     console.log(schoolNames.indexOf(inputSchoolName))
@@ -229,6 +236,7 @@ $('#schoolNameInput').on('blur', function() {
         $("#schoolAddressInput").trigger("change");
     }
 });
+
 $("#addressCheckbox").change(function() {
     if (this.checked) {
         console.log('Hello')
