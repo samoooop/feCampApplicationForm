@@ -238,6 +238,7 @@ $("#addressCheckbox").change(function() {
         $("#pStreet").val($("#street").val())
         $("#pSubDistrict").val($("#subDistrict").val())
         $("#pDistrict").val($("#district").val())
+        $("#pprefacture").val($("#prefacture").val())
     } else {
         $("#pHouseNo").val("")
         $("#pMoo").val("")
@@ -245,6 +246,7 @@ $("#addressCheckbox").change(function() {
         $("#pStreet").val("")
         $("#pSubDistrict").val("")
         $("#pDistrict").val("")
+        $("#pprefacture").val("")
     }
 });
 
@@ -292,7 +294,7 @@ var getConfirmation = function() {
         $("#sel1").val(),
         $("#disease").val(),
         $("#donteat").val(),
-        $("#houseNo").val() + " " + $("#moo").val() + " " + $("#soi").val() + " " + $("#street").val() + " " + $("#subDistrict").val() + " " + $("#district").val(),
+        $("#houseNo").val() + " " + $("#moo").val() + " " + $("#soi").val() + " " + $("#street").val() + " " + $("#subDistrict").val() + " " + $("#district").val() + " " + $("#prefacture").val(),
         $("#telephone").val(),
         $("#phone").val(),
         $("#email").val(),
