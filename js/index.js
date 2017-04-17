@@ -247,6 +247,7 @@ $("#addressCheckbox").change(function() {
         $("#pSubDistrict").val($("#subDistrict").val())
         $("#pDistrict").val($("#district").val())
         $("#pprefacture").val($("#prefacture").val())
+        $("#pposcode").val($("#poscode").val())
     } else {
         $("#pHouseNo").val("")
         $("#pMoo").val("")
@@ -255,6 +256,7 @@ $("#addressCheckbox").change(function() {
         $("#pSubDistrict").val("")
         $("#pDistrict").val("")
         $("#pprefacture").val("")
+        $("#pposcode").val("")
     }
 });
 
@@ -291,19 +293,26 @@ var getConfirmation = function() {
         "โรคประจำตัว:",
         "อาหารที่แพ้:",
         "ที่อยู่:",
-        "หมายเลขโทรศัพท์:",
-        "หมายเลขโทรศัพท์มือถือ:",
-        "อีเมล:",
+        "โทรศัพท์บ้าน:",
+        "โทรศัพท์มือถือ:",
+        "อีเมล์แอดเดรส:",
         "ขนาดเสื้อ:"
     ];
+
+    var isMoo = (($("#moo").val()=="")?"":"หมู่ที่ ");
+    var isSoi = (($("#soi").val() == "")? "":"ซอย");
+    var isStreet = (($("#street").val() == "")?"":"ถนน");
+    var isSubDistrict = (($("#prefacture").val() == "กรุงเทพมหานคร")?"แขวง":"ตำบล");
+    var isDistrict = (($("#prefacture").val() == "กรุงเทพมหานคร")?"เขต":"อำเภอ");
+
     var info = [
         $("#first_name").val() + "   " + $("#last_name").val(),
         $("#nickname").val(),
         $("#birthdatepicker").val(),
         $("#sel1").val(),
-        $("#disease").val(),
-        $("#donteat").val(),
-        $("#houseNo").val() + " " + $("#moo").val() + " " + $("#soi").val() + " " + $("#street").val() + " " + $("#subDistrict").val() + " " + $("#district").val() + " " + $("#prefacture").val(),
+        ($("#disease").val() == "")? "-":$("#disease").val(),
+        ($("#donteat").val() == "")? "-":$("#donteat").val(),
+        $("#houseNo").val() + " "  + isMoo + $("#moo").val() + " " + isSoi +  $("#soi").val() + " " + isStreet + $("#street").val() + " " + isSubDistrict + $("#subDistrict").val() + " " + isDistrict + $("#district").val() + " " + $("#prefacture").val() + " " + $("#poscode").val(),
         $("#telephone").val(),
         $("#phone").val(),
         $("#email").val(),
@@ -343,8 +352,8 @@ var getConfirmation = function() {
     var table = document.getElementById("parentInfoTable");
     var head = [
         "ชื่อ - นามสกุล:",
-        "ความสัมพันธ์:",
-        "หมายเลขโทรศัพท์:"
+        "ความสัมพันธ์กับนักเรียน:",
+        "โทรศัพท์มือถือ:"
     ];
     var info = [
         $("#pFirstName").val() + "   " + $("#pLastName").val(),
