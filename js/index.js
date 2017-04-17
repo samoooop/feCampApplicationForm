@@ -253,13 +253,14 @@ $("#addressCheckbox").change(function() {
 $('#contact_form').validator().on('submit', function(e) {
     if (e.isDefaultPrevented()) {
         console.log("Hey it's wrong")
+        // $('#warningIncompleteSubmitModal').modal('show');
     } else {
         console.log("Hey Goodjob")
         event.preventDefault()
         console.log('Hello')
         divId = "registerForm"
         $("#" + divId).toggle();
-        $('#myModal').modal('show');
+        $('#warningSubmitModal').modal('show');
         confirmationDivId = "confirmation"
         $("#" + confirmationDivId).toggle();
         getConfirmation();
@@ -354,17 +355,17 @@ var getConfirmation = function() {
 
     var table = document.getElementById("answerTable");
     var head = [
-        "<b><font size=\"4\">คำถามข้อที่ 1</font></b>",
+        "<b><font size=\"4\">คำตอบข้อที่ 1</font></b>",
         $("#answer1").val(),
-        "<b><font size=\"4\">คำถามข้อที่ 2</font></b>",
+        "<b><font size=\"4\">คำตอบข้อที่ 2</font></b>",
         $("#answer2").val(),
-        "<b><font size=\"4\">คำถามข้อที่ 3</font></b>",
+        "<b><font size=\"4\">คำตอบข้อที่ 3</font></b>",
         $("#answer3").val(),
-        "<b><font size=\"4\">คำถามข้อที่ 4</font></b>",
+        "<b><font size=\"4\">คำตอบข้อที่ 4</font></b>",
         $("#answer4").val(),
-        "<b><font size=\"4\">คำถามข้อที่ 5</font></b>",
+        "<b><font size=\"4\">คำตอบข้อที่ 5</font></b>",
         $("#answer5").val(),
-        "<b><font size=\"4\">คำถามข้อที่ 6</font></b>",
+        "<b><font size=\"4\">คำตอบข้อที่ 6</font></b>",
         $("#answer6").val()
     ];
     // var info = [
