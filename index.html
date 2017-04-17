@@ -13,7 +13,7 @@
             font-size: 72 px;
             font-style: oblique;
         }
-        
+
         .mitr {
             font-family: 'Mitr', sans-serif;
         }
@@ -100,6 +100,8 @@
                               <option>คริสต์</option>
                               <option>อิสลาม</option>
                               <option>ฮินดู</option>
+                              <option>ไม่นับถือศาสนา</option>
+                              <option>อื่น ๆ</option>
                               </select>
                         </div>
                         <div class="col-xs-1">
@@ -155,6 +157,13 @@
                         <div class="col-xs-4 form-group has-feedback">
                             <div class="input-group inputGroupContainer">
                                 <input name="prefacture" placeholder="จังหวัด" class="form-control" type="text" id="prefacture" required>
+                            </div>
+                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        </div>
+
+                        <div class="col-xs-4 form-group has-feedback">
+                            <div class="input-group inputGroupContainer">
+                                <input name="poscode" placeholder="รหัสไปรษณีย์" class="form-control" type="text" id="poscode" required>
                             </div>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
@@ -330,6 +339,13 @@
                                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             </div>
 
+                            <div class="col-xs-4 form-group has-feedback">
+                                <div class="input-group inputGroupContainer">
+                                    <input name="postcode" placeholder="รหัสไปรษณีย์" class="form-control" type="text" id="ppostcode" required>
+                                </div>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                            </div>
+
                         </div>
 
                     </div>
@@ -369,23 +385,29 @@
                     <div class="well" id="questions">
                         <legend>ข้อมูลการสมัคร</legend>
                         <div class=row>
+                          <label class="col-md-2 control-label">GPAX</label>
                             <div class="col-xs-4 form-group has-feedback">
                                 <div class="input-group inputGroupContainer">
-                                    <input name="grade" placeholder="เกรด(ex.4.00)" class="form-control no-spin" type="number" id="grade" required min="0">
+                                    <input name="grade" placeholder="เกรดเฉลี่ยสะสม" class="form-control no-spin" type="decimal" id="grade" required min="0">
                                 </div>
                             </div>
-                            <div class="col-xs-8">
-                                <div class="form-group has-feedback">
-                                    <label class="col-md-2 control-label">Transcript</label>
-                                    <div class="col-md-10 inputGroupContainer">
-                                        <div class="input-group">
-                                            <input type="file" accept=".pdf" name="pp5" class="form-control"></input>
-                                        </div>
-                                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+
+                        </div>
+
+                        <div class=row>
+                        <div class="col-xs-8">
+                            <div class="form-group has-feedback">
+                                <label class="col-md-2 control-label">Transcript</label>
+                                <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                        <input type="file" accept=".pdf" name="pp5" class="form-control"></input>
                                     </div>
+                                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
                             </div>
                         </div>
+                      </div>
+
                         <div class="row">
                             <div class="form-group has-feedback">
                                 <label class="col-md-2 control-label">คำถามข้อที่ 1</label> คำถามข้อหนึ่งคำถามข้อหนึ่งคำถามข้อหนึ่งคำถามข้อหนึ่งคำถามข้อหนึ่งคำถามข้อหนึ่ง คำถามข้อหนึ่งคำถามข้อหนึ่งคำถามข้อหนึ่งคำถามข้อหนึ่งคำถามข้อหนึ่ง
