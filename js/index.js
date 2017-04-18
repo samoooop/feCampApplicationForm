@@ -217,7 +217,10 @@ $('#backButton').on('click', function(e) {
 })
 
 $(function() {
-    $("#birthdatepicker").datepicker();
+    $("#birthdatepicker").datepicker({
+        yearRange: '1994:1996',
+        changeYear: true
+    });
 });
 
 $('#prefacture').on('blur', function() {
@@ -299,25 +302,25 @@ var getConfirmation = function() {
         "อาหารที่แพ้:"
     ];
 
-    var isMoo = (($("#moo").val()=="")?"":"หมู่ที่ ");
-    var isSoi = (($("#soi").val() == "")? "":"ซอย");
-    var isStreet = (($("#street").val() == "")?"":"ถนน");
-    var isSubDistrict = (($("#prefacture").val() == "กรุงเทพมหานคร")?"แขวง":"ตำบล");
-    var isDistrict = (($("#prefacture").val() == "กรุงเทพมหานคร")?"เขต":"อำเภอ");
-    var isPrefacture = (($("#prefacture").val() == "กรุงเทพมหานคร")?"":"จังหวัด");
+    var isMoo = (($("#moo").val() == "") ? "" : "หมู่ที่ ");
+    var isSoi = (($("#soi").val() == "") ? "" : "ซอย");
+    var isStreet = (($("#street").val() == "") ? "" : "ถนน");
+    var isSubDistrict = (($("#prefacture").val() == "กรุงเทพมหานคร") ? "แขวง" : "ตำบล");
+    var isDistrict = (($("#prefacture").val() == "กรุงเทพมหานคร") ? "เขต" : "อำเภอ");
+    var isPrefacture = (($("#prefacture").val() == "กรุงเทพมหานคร") ? "" : "จังหวัด");
 
     var info = [
         $("#first_name").val() + "   " + $("#last_name").val(),
         $("#nickname").val(),
         $("#birthdatepicker").val(),
-        $("#houseNo").val() + " "  + isMoo + $("#moo").val() + " " + isSoi +  $("#soi").val() + " " + isStreet + $("#street").val() + " " + isSubDistrict + $("#subDistrict").val() + " " + isDistrict + $("#district").val() + " " + isPrefacture + $("#prefacture").val() + " " + $("#poscode").val(),
+        $("#houseNo").val() + " " + isMoo + $("#moo").val() + " " + isSoi + $("#soi").val() + " " + isStreet + $("#street").val() + " " + isSubDistrict + $("#subDistrict").val() + " " + isDistrict + $("#district").val() + " " + isPrefacture + $("#prefacture").val() + " " + $("#poscode").val(),
         $("#telephone").val(),
         $("#phone").val(),
         $("#email").val(),
         $("#shirtSize").val(),
         $("#sel1").val(),
-        ($("#disease").val() == "")? "-":$("#disease").val(),
-        ($("#donteat").val() == "")? "-":$("#donteat").val()
+        ($("#disease").val() == "") ? "-" : $("#disease").val(),
+        ($("#donteat").val() == "") ? "-" : $("#donteat").val()
     ];
     $("#personalInfoTable tr").remove();
     for (var i = 0; i < head.length; i++) {
