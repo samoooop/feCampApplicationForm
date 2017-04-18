@@ -247,6 +247,7 @@ $("#addressCheckbox").change(function() {
         $("#pSubDistrict").val($("#subDistrict").val())
         $("#pDistrict").val($("#district").val())
         $("#pprefacture").val($("#prefacture").val())
+        $("#pposcode").val($("#poscode").val())
     } else {
         $("#pHouseNo").val("")
         $("#pMoo").val("")
@@ -255,6 +256,7 @@ $("#addressCheckbox").change(function() {
         $("#pSubDistrict").val("")
         $("#pDistrict").val("")
         $("#pprefacture").val("")
+        $("#pposcode").val("")
     }
 });
 
@@ -284,30 +286,38 @@ $("#" + confirmationDivId).toggle();
 var getConfirmation = function() {
     var table = document.getElementById("personalInfoTable");
     var head = [
-        "ชื่อ - นามสกุล:",
+        "ชื่อ-สกุล:",
         "ชื่อเล่น",
-        "วันเดือนปีเกิด:",
+        "วัน/เดือน/ปี เกิด:",
+        "ที่อยู่:",
+        "โทรศัพท์บ้าน:",
+        "โทรศัพท์มือถือ:",
+        "อีเมล์แอดเดรส:",
+        "ขนาดเสื้อ:",
         "ศาสนา:",
         "โรคประจำตัว:",
-        "อาหารที่แพ้:",
-        "ที่อยู่:",
-        "หมายเลขโทรศัพท์:",
-        "หมายเลขโทรศัพท์มือถือ:",
-        "อีเมล:",
-        "ขนาดเสื้อ:"
+        "อาหารที่แพ้:"
     ];
+
+    var isMoo = (($("#moo").val()=="")?"":"หมู่ที่ ");
+    var isSoi = (($("#soi").val() == "")? "":"ซอย");
+    var isStreet = (($("#street").val() == "")?"":"ถนน");
+    var isSubDistrict = (($("#prefacture").val() == "กรุงเทพมหานคร")?"แขวง":"ตำบล");
+    var isDistrict = (($("#prefacture").val() == "กรุงเทพมหานคร")?"เขต":"อำเภอ");
+    var isPrefacture = (($("#prefacture").val() == "กรุงเทพมหานคร")?"":"จังหวัด");
+
     var info = [
         $("#first_name").val() + "   " + $("#last_name").val(),
         $("#nickname").val(),
         $("#birthdatepicker").val(),
-        $("#sel1").val(),
-        $("#disease").val(),
-        $("#donteat").val(),
-        $("#houseNo").val() + " " + $("#moo").val() + " " + $("#soi").val() + " " + $("#street").val() + " " + $("#subDistrict").val() + " " + $("#district").val() + " " + $("#prefacture").val(),
+        $("#houseNo").val() + " "  + isMoo + $("#moo").val() + " " + isSoi +  $("#soi").val() + " " + isStreet + $("#street").val() + " " + isSubDistrict + $("#subDistrict").val() + " " + isDistrict + $("#district").val() + " " + isPrefacture + $("#prefacture").val() + " " + $("#poscode").val(),
         $("#telephone").val(),
         $("#phone").val(),
         $("#email").val(),
-        $("#shirtSize").val()
+        $("#shirtSize").val(),
+        $("#sel1").val(),
+        ($("#disease").val() == "")? "-":$("#disease").val(),
+        ($("#donteat").val() == "")? "-":$("#donteat").val()
     ];
     $("#personalInfoTable tr").remove();
     for (var i = 0; i < head.length; i++) {
@@ -343,8 +353,8 @@ var getConfirmation = function() {
     var table = document.getElementById("parentInfoTable");
     var head = [
         "ชื่อ - นามสกุล:",
-        "ความสัมพันธ์:",
-        "หมายเลขโทรศัพท์:"
+        "ความสัมพันธ์กับนักเรียน:",
+        "โทรศัพท์มือถือ:"
     ];
     var info = [
         $("#pFirstName").val() + "   " + $("#pLastName").val(),
