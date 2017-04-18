@@ -286,17 +286,17 @@ $("#" + confirmationDivId).toggle();
 var getConfirmation = function() {
     var table = document.getElementById("personalInfoTable");
     var head = [
-        "ชื่อ - นามสกุล:",
+        "ชื่อ-สกุล:",
         "ชื่อเล่น",
-        "วันเดือนปีเกิด:",
-        "ศาสนา:",
-        "โรคประจำตัว:",
-        "อาหารที่แพ้:",
+        "วัน/เดือน/ปี เกิด:",
         "ที่อยู่:",
         "โทรศัพท์บ้าน:",
         "โทรศัพท์มือถือ:",
         "อีเมล์แอดเดรส:",
-        "ขนาดเสื้อ:"
+        "ขนาดเสื้อ:",
+        "ศาสนา:",
+        "โรคประจำตัว:",
+        "อาหารที่แพ้:"
     ];
 
     var isMoo = (($("#moo").val()=="")?"":"หมู่ที่ ");
@@ -304,19 +304,20 @@ var getConfirmation = function() {
     var isStreet = (($("#street").val() == "")?"":"ถนน");
     var isSubDistrict = (($("#prefacture").val() == "กรุงเทพมหานคร")?"แขวง":"ตำบล");
     var isDistrict = (($("#prefacture").val() == "กรุงเทพมหานคร")?"เขต":"อำเภอ");
+    var isPrefacture = (($("#prefacture").val() == "กรุงเทพมหานคร")?"":"จังหวัด");
 
     var info = [
         $("#first_name").val() + "   " + $("#last_name").val(),
         $("#nickname").val(),
         $("#birthdatepicker").val(),
-        $("#sel1").val(),
-        ($("#disease").val() == "")? "-":$("#disease").val(),
-        ($("#donteat").val() == "")? "-":$("#donteat").val(),
-        $("#houseNo").val() + " "  + isMoo + $("#moo").val() + " " + isSoi +  $("#soi").val() + " " + isStreet + $("#street").val() + " " + isSubDistrict + $("#subDistrict").val() + " " + isDistrict + $("#district").val() + " " + $("#prefacture").val() + " " + $("#poscode").val(),
+        $("#houseNo").val() + " "  + isMoo + $("#moo").val() + " " + isSoi +  $("#soi").val() + " " + isStreet + $("#street").val() + " " + isSubDistrict + $("#subDistrict").val() + " " + isDistrict + $("#district").val() + " " + isPrefacture + $("#prefacture").val() + " " + $("#poscode").val(),
         $("#telephone").val(),
         $("#phone").val(),
         $("#email").val(),
-        $("#shirtSize").val()
+        $("#shirtSize").val(),
+        $("#sel1").val(),
+        ($("#disease").val() == "")? "-":$("#disease").val(),
+        ($("#donteat").val() == "")? "-":$("#donteat").val()
     ];
     $("#personalInfoTable tr").remove();
     for (var i = 0; i < head.length; i++) {
